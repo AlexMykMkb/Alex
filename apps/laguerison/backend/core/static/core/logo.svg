@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="120" viewBox="0 0 300 120">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#0b557a"/>
+      <stop offset="1" stop-color="#046678"/>
+    </linearGradient>
+    <style>
+      .name{font-family:Segoe UI, Roboto, Arial, sans-serif; font-weight:700; fill:#04455f}
+      .tag{font-family:Segoe UI, Roboto, Arial, sans-serif; font-size:12px; fill:#07738a}
+    </style>
+  </defs>
+  <rect rx="12" ry="12" width="300" height="120" fill="#ffffff" stroke="#e6f0f3"/>
+  <g transform="translate(18,18)">
+    <circle cx="36" cy="36" r="36" fill="url(#g)" />
+    <path d="M36 15 L46 36 L36 57 L26 36 Z" fill="#fff" opacity="0.95"/>
+    <text x="84" y="40" class="name" font-size="20">LA GUÉRISON</text>
+    <text x="84" y="62" class="tag">Hôpital • Consultation • Facturation</text>
+  </g>
+</svg>

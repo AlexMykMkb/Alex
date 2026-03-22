@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hôpital LA GUÉRISON</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'core/style.css' %}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div style="display:flex;align-items:center;gap:18px">
+        <img class="logo" src="{% static 'core/logo.svg' %}" alt="LA GUÉRISON">
+        <div>
+          <nav>
+            <a href="/">Accueil</a>
+            <a href="/admin/">Espace administrateur</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Hôpital LA GUÉRISON</h1>
+        <p>Soins de qualité — Consultation, Facturation, Caisse et Rapports.</p>
+        <p><a class="btn" href="/admin/">Se connecter (administration)</a></p>
+      </div>
+    </section>
+
+    <section class="services container">
+      <article>
+        <h3>Consultation</h3>
+        <p>Enregistrement et suivi des patients par le personnel médical.</p>
+      </article>
+      <article>
+        <h3>Facturation</h3>
+        <p>Gestion des factures, paiements et rapports quotidiens.</p>
+      </article>
+      <article>
+        <h3>Sécurité & Traçabilité</h3>
+        <p>Comptes utilisateur, rôles et historique des actions.</p>
+      </article>
+    </section>
+
+    <section class="container">
+      <h2>Exemples de boutons</h2>
+      <div class="btn-examples">
+        <a class="btn btn-pill" href="/admin/">Pill - Connexion</a>
+        <a class="btn-outline" href="/admin/">Outline</a>
+        <a class="btn btn-ribbon" href="/admin/">Ribbon</a>
+        <a class="btn btn-hex" href="/admin/">Hex</a>
+        <a class="btn btn-small btn-pill" href="/admin/">Petit</a>
+        <a class="window-btn" href="/admin/">Fenêtre</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Hôpital LA GUÉRISON</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* Custom admin theme for LA GUÉRISON (hospital style) */
+:root{
+  --primary:#0b557a;
+  --primary-dark:#04455f;
+  --muted:#222;
+  --panel:#111214;
+}
+
+/* Body background and base */
+body{
+  background: linear-gradient(180deg,#0f1314,#0b0d0e);
+  color:#e6f2f5;
+}
+
+/* Top header */
+#header{
+  background:var(--primary);
+  border-bottom:6px solid rgba(4,69,95,0.9);
+  box-shadow:0 4px 14px rgba(0,0,0,0.45);
+}
+#header h1, #header .module{color: #ffef9a}
+
+/* Branding */
+#site-name a{color:#fff;text-decoration:none;font-weight:700}
+
+/* Main content panels */
+.app-list, .module, .dashboard-module, .module h2{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.04);
+  border-left:6px solid var(--primary);
+  padding:12px 18px;
+  margin-bottom:12px;
+  border-radius:10px;
+}
+
+/* Links (add / change) styling to look like small window-buttons */
+a.addlink, a.changelink, .object-tools a{
+  display:inline-block;
+  background:linear-gradient(90deg,var(--primary),var(--primary-dark));
+  color:#fff !important;
+  padding:6px 10px;
+  border-radius:8px;
+  box-shadow:0 6px 12px rgba(0,0,0,0.4);
+  text-decoration:none;
+}
+
+/* Tables and forms */
+#content-main, .inline-group fieldset{
+  background: rgba(0,0,0,0.15);
+  border-radius:8px;
+  padding:12px;
+}
+
+/* Buttons */
+input[type=submit], button, .submit-row .button{
+  background:linear-gradient(90deg,var(--primary),var(--primary-dark));
+  color:#fff;
+  border:none;
+  padding:8px 14px;
+  border-radius:8px;
+  box-shadow:0 8px 18px rgba(4,69,95,0.25);
+}
+
+/* Sidebar */
+#user-tools, #nav-sidebar{
+  background:transparent;
+}
+
+/* Responsive tweaks */
+@media(max-width:900px){
+  #header{padding:14px}
+  .app-list{padding:10px}
+}

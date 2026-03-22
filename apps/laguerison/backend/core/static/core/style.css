@@ -1,0 +1,141 @@
+*{box-sizing:border-box;font-family:Segoe UI, Roboto, Arial, sans-serif}
+body{margin:0;color:#222;background:#fff}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.site-header{background:#0b557a;color:#fff}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.site-header .logo{height:56px}
+
+/* Color palette for button variants */
+:root{
+	--primary:#0b557a;
+	--primary-dark:#046678;
+	--success-1:#38b24a; --success-2:#2ea34b;
+	--info-1:#4aa3e0; --info-2:#2b8dd6;
+	--warning-1:#f6a623; --warning-2:#f08b2d;
+	--danger-1:#e94b4b; --danger-2:#d43a3a;
+	--neutral-1:#68707a; --neutral-2:#4f5660;
+}
+
+/* Window-like clickable button style (applies site-wide to .btn and header links) */
+.window-btn, .btn, .site-header nav a{
+	display:inline-block;
+	position:relative;
+	background:linear-gradient(180deg,#ffffff,#f1f7f9);
+	border:1px solid #cfe6ea;
+	border-radius:8px;
+	padding:8px 14px;
+	color:#04455f;
+	text-decoration:none;
+	font-weight:600;
+	box-shadow:0 6px 10px rgba(6,30,40,0.08), inset 0 1px 0 rgba(255,255,255,0.6);
+	transition:transform .12s ease, box-shadow .12s ease;
+	margin-left:8px;
+}
+.window-btn::before, .btn::before, .site-header nav a::before{
+	content:'';
+	position:absolute;
+	left:8px;
+	top:6px;
+	width:36px;
+	height:6px;
+	border-radius:3px;
+	background:linear-gradient(90deg,#0b557a,#046678);
+	opacity:0.9;
+}
+.window-btn:hover, .btn:hover, .site-header nav a:hover{
+	transform:translateY(-4px);
+	box-shadow:0 12px 20px rgba(6,30,40,0.14);
+}
+
+/* Primary style for .btn (colored) */
+.btn{
+	color:#fff;
+	background:linear-gradient(90deg,#0b557a,#046678);
+	box-shadow:0 6px 12px rgba(6,30,40,0.18);
+}
+.btn::before{ left:10px; top:8px; width:28px; height:5px; background: rgba(255,255,255,0.2); }
+
+.hero{background:linear-gradient(90deg,#e9f3f7,#fff);padding:60px 0;border-bottom:4px solid #0b557a}
+.hero h1{margin:0 0 10px;font-size:36px;color:#0b557a}
+.hero p{margin:0 0 12px;color:#04455f}
+
+/* Make service cards look like small windows too */
+.services{display:flex;gap:20px;margin-top:30px}
+.services article{flex:1;background:linear-gradient(180deg,#fbffff,#f7fbfd);padding:20px;border-radius:8px;border:1px solid #d9eef3;box-shadow:0 6px 14px rgba(6,30,40,0.06);cursor:pointer}
+.services h3{margin-top:0;color:#0b557a}
+
+.site-footer{background:#f1f5f7;padding:16px;border-top:1px solid #e2e8ea;text-align:center;color:#555}
+@media(max-width:800px){.services{flex-direction:column}}
+
+/* Additional button variants inspired by examples */
+.btn-pill{
+	border-radius:999px;
+	padding:10px 26px;
+	background:linear-gradient(90deg,var(--success-1),var(--success-2));
+	box-shadow:0 8px 18px rgba(46,163,75,0.18);
+}
+
+.btn-outline{
+	background:transparent;
+	color:#0b557a;
+	border:2px solid #cfe6ea;
+	padding:8px 18px;
+	border-radius:999px;
+}
+
+.btn-ribbon{
+	position:relative;
+	background:linear-gradient(90deg,var(--warning-1),var(--warning-2));
+	color:#fff;
+	padding:12px 20px;
+	border-radius:6px;
+}
+.btn-ribbon::after{
+	content:'';
+	position:absolute;
+	right:-14px; top:50%; transform:translateY(-50%);
+	width:0;height:0;border-top:12px solid transparent;border-bottom:12px solid transparent;border-left:14px solid rgba(240,139,45,0.95);
+}
+
+.btn-hex{
+	display:inline-block;
+	position:relative;
+	color:#fff;
+	padding:10px 22px;
+	background:linear-gradient(90deg,var(--info-1),var(--info-2));
+	clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+}
+
+.btn-small{padding:6px 10px;font-size:13px}
+
+/* Make header links use pill style on small screens */
+@media(max-width:700px){
+	.site-header nav a{padding:8px 12px;border-radius:999px}
+}
+
+/* Example grid of buttons */
+.btn-examples{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+
+/* Color modifier classes for buttons */
+.btn--primary{background:linear-gradient(90deg,var(--primary),var(--primary-dark)); color:#fff}
+.btn--success{background:linear-gradient(90deg,var(--success-1),var(--success-2)); color:#fff}
+.btn--info{background:linear-gradient(90deg,var(--info-1),var(--info-2)); color:#fff}
+.btn--warning{background:linear-gradient(90deg,var(--warning-1),var(--warning-2)); color:#fff}
+.btn--danger{background:linear-gradient(90deg,var(--danger-1),var(--danger-2)); color:#fff}
+.btn--neutral{background:linear-gradient(90deg,var(--neutral-1),var(--neutral-2)); color:#fff}
+
+/* Outline variants colored */
+.btn-outline--primary{border-color:var(--primary);color:var(--primary)}
+.btn-outline--success{border-color:var(--success-1);color:var(--success-1)}
+.btn-outline--info{border-color:var(--info-1);color:var(--info-1)}
+.btn-outline--warning{border-color:var(--warning-1);color:var(--warning-1)}
+.btn-outline--danger{border-color:var(--danger-1);color:var(--danger-1)}
+.btn-outline--neutral{border-color:var(--neutral-1);color:var(--neutral-1)}
+
+/* Small stripe color hint for variants */
+.btn--primary::before{ background: linear-gradient(90deg,var(--primary),var(--primary-dark)); }
+.btn--success::before{ background: linear-gradient(90deg,var(--success-1),var(--success-2)); }
+.btn--info::before{ background: linear-gradient(90deg,var(--info-1),var(--info-2)); }
+.btn--warning::before{ background: linear-gradient(90deg,var(--warning-1),var(--warning-2)); }
+.btn--danger::before{ background: linear-gradient(90deg,var(--danger-1),var(--danger-2)); }
+.btn--neutral::before{ background: linear-gradient(90deg,var(--neutral-1),var(--neutral-2)); }
