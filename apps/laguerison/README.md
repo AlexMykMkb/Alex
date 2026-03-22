@@ -26,3 +26,4 @@ cd apps/laguerison/backend
 ```
 
 Ce script lance le serveur local puis ouvre un tunnel temporaire et affiche une URL publique.
+Le lien public est copié automatiquement dans le presse-papiers.

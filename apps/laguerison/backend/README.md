@@ -19,6 +19,8 @@ URL publique temporaire:
 .\start_public.ps1
 ```
 
+Le lien public est détecté et copié automatiquement dans le presse-papiers.
+
 Fonctionnalités incluses dans ce scaffold:
 - Modèles: Patient, Consultation, Invoice, InvoiceLine, Payment, DailyReport
 - Admin Django pour gestion rapide

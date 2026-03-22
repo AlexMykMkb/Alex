@@ -45,10 +45,25 @@ try {
     }
 
     Write-Host "Tunnel public en cours..."
-    Write-Host "Copiez l'URL https://....lhr.life affichée ci-dessous."
+    Write-Host "L'URL publique sera copiée automatiquement dans le presse-papiers."
     Write-Host "Arrêt: Ctrl+C"
 
-    & ssh @tunnelArgs
+    $urlCopied = $false
+
+    & ssh @tunnelArgs 2>&1 | ForEach-Object {
+        $line = $_.ToString()
+        Write-Host $line
+
+        if (-not $urlCopied) {
+            $match = [regex]::Match($line, 'https://[a-zA-Z0-9.-]+')
+            if ($match.Success) {
+                $publicUrl = $match.Value
+                Set-Clipboard -Value $publicUrl
+                Write-Host "URL copiée dans le presse-papiers: $publicUrl" -ForegroundColor Green
+                $urlCopied = $true
+            }
+        }
+    }
 }
 finally {
     if ($serverProcess -and -not $serverProcess.HasExited) {
