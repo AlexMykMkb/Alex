@@ -8,10 +8,15 @@ Quick start (Windows PowerShell):
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-cd C:/workspace/laguerison
 python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
+```
+
+URL publique temporaire:
+
+```powershell
+.\start_public.ps1
 ```
 
 Fonctionnalités incluses dans ce scaffold:
